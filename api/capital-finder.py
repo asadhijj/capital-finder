@@ -3,7 +3,7 @@ from urllib import parse
 import requests
 
 class handler(BaseHTTPRequestHandler):
-    def get_countries(self):
+    def do_GET(self):
         s = self.path
         url_components = parse.urlsplit(s)
         print(url_components)
